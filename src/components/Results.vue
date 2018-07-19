@@ -13,14 +13,13 @@
          v-bind:alt="result.title" class="poster-image">
             <h2 class="title"><a v-bind:href="'https://www.themoviedb.org/movie/' + result.ID">{{ result.title }}</a></h2>
         <div class="ratings">
-          <span class="rating-category critics-choice" v-if="result.vote_average > 8 ">Critic's Choice</span>
+          <span class="rating-category critics-choice" v-if="result.vote_average > 8">Critic's Choice</span>
           <span class="rating-category well-liked" v-else-if="result.vote_average > 7">Well Liked</span>
           <span class="rating-category stinker" v-else>Stinker</span>
           <span class="vote-average">{{ result.vote_average }}</span> with <span class="vote-count">{{ result.vote_count }}</span> 
         </div>
         <p class="overview">
-          {{ result.overivew }}
-          Movie overivew goes here. Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc. Cras dapibus. Praesent porttitor, nulla vitae posuere iaculis, arcu nisl dignissim dolor, a pretium mi sem ut ipsum.
+          {{ result.overview }}
         </p>
         <p class="release-date">Original Release: {{ result.release_date }}</p>
         <ul class="genre-list">
